@@ -14,10 +14,23 @@ Features:
 run this tool with:
 sepa2odoo -c /etc/toolsconf/sepa2odoo.conf
 
+This tool will work on files (root folder):
+<pre>
+./incoming              <- Read and process XP and XT files.
+                           Files that are not recognized are moved to ./not_processed folder
+./processed             <- Files that have been successfully processed are stored here
+./not_processed         <- Unrecognized files are stored here
+
+./outgoing              <- Store generated XL files in this folder
+</pre>
+
+For sending files to bank and downloading files see:
+https://github.com/kdilayer/ws_sepa
+
 Configuration 
 <pre>
   {
-    "working_folder": "/var/lib/ws_sepa",
+    "working_folder": "/var/lib/ws_sepa",                          => Root folder for storing files
     "profiles": [
         {
             "name": "Company name",
@@ -38,3 +51,4 @@ Configuration
     
 }
 </pre>
+
