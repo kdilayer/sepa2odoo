@@ -1,0 +1,4 @@
+#pragma once
+
+
+#cmakedefine01 STANDALONE_BUILD

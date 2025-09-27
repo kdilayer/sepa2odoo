@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build",
+        "type": "shell",
+        "linux": {
+          "command": "make", 
+        },
+        "windows": {
+          "command": "d:\\kari\\dobuild.bat ${workspaceFolder}/build/flow.sln"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "options": {
+          "cwd": "${workspaceFolder}/build"
+        },
+        "problemMatcher": {
+          "owner": "cpp",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+          }
+        },
+        "presentation": {
+            "clear": true                        // <-- this line
+        }
+        
+      }
+      /*
+      {
+        "label": "vcvars",
+        "type": "shell",
+        "command": "'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\Tools\\VsDevCmd.bat'"
+      },
+      {
+        "type": "shell",
+        "label": "msbuild build project",
+        "command": "msbuild.exe",
+        "args": [
+          "${workspaceFolder}\\build\\examplecflow.sln"
+        ],
+        "problemMatcher": ["$msCompile"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+      */
+    ]
+  }
