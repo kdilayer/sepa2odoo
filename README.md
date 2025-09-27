@@ -1,6 +1,7 @@
 **Sepa2odoo**
 
 A tool that integrates Odoo Sepa credit and ISO2002 payments with banking systems.
+This library creates and parses SEPA XML files. For sending/receiving files to/from bank see https://github.com/kdilayer/ws_sepa
 
 Features:
 - upload bank statement and transactions to odoo: read and parse a bank statement (camt.053.001.02 xml file) and write entries to odoo (so they can be reconciled in odoo)
@@ -23,9 +24,6 @@ This tool will work on files ("working_folder"):
 
 ./outgoing              <- Store generated XL files in this folder
 </pre>
-
-For sending files to bank and downloading files see:
-https://github.com/kdilayer/ws_sepa
 
 Configuration 
 <pre>
