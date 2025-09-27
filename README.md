@@ -14,7 +14,7 @@ Features:
 run this tool with:
 sepa2odoo -c /etc/toolsconf/sepa2odoo.conf
 
-This tool will work on files (root folder):
+This tool will work on files ("working_folder"):
 <pre>
 ./incoming              <- Read and process XP and XT files.
                            Files that are not recognized are moved to ./not_processed folder
